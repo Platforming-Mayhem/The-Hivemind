@@ -82,8 +82,9 @@ public class FPSControllerScript : MonoBehaviour
         flashLight.intensity = 0.0f;
         yield return new WaitForSeconds(0.4f);
         flashLight.intensity = 1.0f;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.3f);
         flashLight.intensity = 0.0f;
+        yield return new WaitForSeconds(0.4f);
         if ((SceneManager.sceneCountInBuildSettings - 1) > SceneManager.GetActiveScene().buildIndex)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

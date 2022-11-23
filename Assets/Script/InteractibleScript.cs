@@ -21,7 +21,7 @@ public class InteractibleScript : MonoBehaviour
         Vector3 direction = transform.position - cam.transform.position;
         if (Vector3.Dot(cam.transform.forward, direction.normalized) >= 0.94f && direction.magnitude <= distance)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetMouseButtonDown(0))
             {
                 informationText.text = information;
             }
