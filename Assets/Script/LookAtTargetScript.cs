@@ -16,7 +16,6 @@ public class LookAtTargetScript : MonoBehaviour
     {
         Vector3 offset = Vector3.Scale(transform.position - target.position, Vector3.one - Vector3.up).normalized;
         float angle = Mathf.Atan2(offset.z, -offset.x) * Mathf.Rad2Deg + 90.0f;
-        Debug.Log(angle);
         transform.eulerAngles = new Vector3(0.0f, angle, 0.0f);
     }
 }
