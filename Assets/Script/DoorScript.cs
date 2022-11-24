@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public Animator anim;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
             anim.SetBool("Open", true);
         }
@@ -27,7 +28,7 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
             anim.SetBool("Open", false);
         }
