@@ -36,9 +36,15 @@ public class AI : MonoBehaviour
      
         if (dist <= within_range)
         {
+
             
             //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-         }
+        }
+
+             
+
+
+
       
     }
 
