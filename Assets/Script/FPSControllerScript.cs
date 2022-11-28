@@ -6,17 +6,16 @@ using UnityEngine;
 
 public class FPSControllerScript : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Transform rb;
     public AudioSource audioS;
     public AudioClip footStepSFX;
     public Light flashLight;
     public Text chargeText;
     public int chargeLevel = 100;
-    public int changeLevel = 95;
     public float sensitivity = 1.0f;
     public float speed = 1.0f;
     private float timer = 1.0f;
-    // Start is called before the first frame update
+
     void Start()
     {
         StartCoroutine(LoseCharge(6.0f, 1));
@@ -34,8 +33,9 @@ public class FPSControllerScript : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(300f, transform.eulerAngles.y, transform.eulerAngles.z);
         }
-        transform.eulerAngles += new Vector3(Input.GetAxis("Mouse Y") * -sensitivity, Input.GetAxis("Mouse X") * sensitivity, 0.0f);
-        if(Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
+        rb.eulerAngles += new Vector3(0.0f, Input.GetAxis("Mouse X") * sensitivity, 0.0f);
+        transform.eulerAngles += Vector3.right * Input.GetAxis("Mouse Y") * -sensitivity;
+        if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
         {
             timer -= Time.deltaTime * 1.4f;
         }
@@ -45,22 +45,19 @@ public class FPSControllerScript : MonoBehaviour
             audioS.pitch = Random.Range(1.0f, 1.5f);
             timer = 1.0f;
         }
-        if(chargeLevel == changeLevel)
-        {
-            chargeLevel--;
-            chargeText.text = chargeLevel.ToString() + "%";
-            PlayerPrefs.SetInt("charge", chargeLevel);
-            StartCoroutine(Flicker());
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            chargeLevel = 100;
-        }
     }
 
-    private void OnEnable()
+    private void OnDisable()
     {
-        if(PlayerPrefs.GetInt("charge") < 100 && PlayerPrefs.GetInt("charge") > 0)
+        PlayerPrefs.SetInt("charge", chargeLevel);
+        PlayerPrefs.SetFloat("X", rb.position.x);
+        PlayerPrefs.SetFloat("Y", rb.position.y);
+        PlayerPrefs.SetFloat("Z", rb.position.z);
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (PlayerPrefs.HasKey("charge"))
         {
             chargeLevel = PlayerPrefs.GetInt("charge");
             chargeText.text = chargeLevel.ToString() + "%";
@@ -68,16 +65,24 @@ public class FPSControllerScript : MonoBehaviour
         else
         {
             chargeLevel = 100;
+            PlayerPrefs.SetInt("charge", chargeLevel);
             chargeText.text = chargeLevel.ToString() + "%";
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            if (PlayerPrefs.HasKey("X"))
+            {
+                rb.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+            }
         }
     }
 
-    private void OnDisable()
+    private void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("charge", chargeLevel);
+        PlayerPrefs.DeleteAll();
     }
 
-    public IEnumerator Flicker()
+    public IEnumerator FlickerOff()
     {
         flashLight.intensity = 0.0f;
         yield return new WaitForSeconds(0.4f);
@@ -85,14 +90,18 @@ public class FPSControllerScript : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         flashLight.intensity = 0.0f;
         yield return new WaitForSeconds(0.4f);
-        if ((SceneManager.sceneCountInBuildSettings - 1) > SceneManager.GetActiveScene().buildIndex)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else
-        {
-            SceneManager.LoadScene(0);
-        }
+        
+    }
+
+    public IEnumerator FlickerOn()
+    {
+        flashLight.intensity = 0.0f;
+        yield return new WaitForSeconds(0.4f);
+        flashLight.intensity = 1.0f;
+        yield return new WaitForSeconds(0.3f);
+        flashLight.intensity = 0.0f;
+        yield return new WaitForSeconds(0.4f);
+        flashLight.intensity = 1.0f;
     }
 
     IEnumerator LoseCharge(float time, int amount)

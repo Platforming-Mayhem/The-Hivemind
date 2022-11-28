@@ -23,7 +23,7 @@ public class TriggerFlickerScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartCoroutine(Flicker());
-            StartCoroutine(player.Flicker());
+            StartCoroutine(player.FlickerOff());
         }
     }
 

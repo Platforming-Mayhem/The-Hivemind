@@ -5,7 +5,10 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public Animator anim;
-    
+    public AudioSource source;
+    public AudioClip open;
+    public AudioClip close;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class DoorScript : MonoBehaviour
         if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
             anim.SetBool("Open", true);
+            source.PlayOneShot(open);
         }
     }
 
@@ -31,6 +35,7 @@ public class DoorScript : MonoBehaviour
         if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
             anim.SetBool("Open", false);
+            source.PlayOneShot(close);
         }
     }
 }

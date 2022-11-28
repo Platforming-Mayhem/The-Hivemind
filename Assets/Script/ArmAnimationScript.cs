@@ -6,6 +6,7 @@ public class ArmAnimationScript : MonoBehaviour
 {
     Animator anim;
     Vector3 previousPosition;
+    public Transform target;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,19 +16,20 @@ public class ArmAnimationScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 offset = transform.parent.position - previousPosition;
-        if(offset.x != 0.0f || offset.z != 0.0f)
+        //Debug.Log((target.position - previousPosition).magnitude);
+        if((target.position - previousPosition).magnitude >= Time.deltaTime)
         {
             anim.SetBool("isMoving", true);
         }
-        else if(offset.x == 0.0f && offset.z == 0.0f)
+        else
         {
             anim.SetBool("isMoving", false);
         }
+        previousPosition = target.position;
     }
 
     private void LateUpdate()
     {
-        previousPosition = transform.position;
+        
     }
 }
