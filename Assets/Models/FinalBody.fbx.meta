@@ -4,26 +4,53 @@ ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 8778753532702055256
-    second: Armature|Sleep|Sleep
+      74: 1354083256325142241
+    second: Sleep
   - first:
-      74: 9041191874471674725
-    second: Armature|Idle|Idle
+      74: -3100369314251171874
+    second: Idle
   - first:
-      74: 4753086136113018238
-    second: Armature|IdleWithGun|IdleWithGun
+      74: 3268360556384431152
+    second: IdleWithGun
   - first:
-      74: -5488135357656403924
-    second: Armature|MoveForward|MoveForward
+      74: -8231835646310287697
+    second: MoveForward
   - first:
-      74: 5824001872097988711
-    second: Armature|MoveBackwards|MoveBackwards
+      74: 5207123191647161967
+    second: MoveBackwards
   - first:
-      74: -6967843246954614078
-    second: Armature|MoveLeft|MoveLeft
+      74: -6538697857662028076
+    second: MoveRight
   - first:
-      74: -5301365823288261036
-    second: Armature|MoveRight|MoveRight
+      74: 4218656385953045049
+    second: MoveLeft
+  - first:
+      74: -5461062958084956067
+    second: OpenGate
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
+  - first:
+      74: 2710190160566752313
+    second: Armature|IdleWithGun
+  - first:
+      74: 8766380223027543319
+    second: Armature|MoveBackwards
+  - first:
+      74: 201527434701937468
+    second: Armature|MoveForward
+  - first:
+      74: 2155838039793346978
+    second: Armature|MoveLeft
+  - first:
+      74: 547170137070732643
+    second: Armature|MoveRight
+  - first:
+      74: 8416935648154277115
+    second: Armature|OpenGate
+  - first:
+      74: 5754330143168782828
+    second: Armature|Sleep
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -53,8 +80,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Sleep|Sleep
-      takeName: Armature|Sleep|Sleep
+      name: Sleep
+      takeName: Sleep
       internalID: 0
       firstFrame: 0
       lastFrame: 40
@@ -82,10 +109,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Idle|Idle
-      takeName: Armature|Idle|Idle
+      name: Idle
+      takeName: Idle
       internalID: 0
-      firstFrame: 2
+      firstFrame: 0
       lastFrame: 36
       wrapMode: 0
       orientationOffsetY: 0
@@ -93,7 +120,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -111,10 +138,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|IdleWithGun|IdleWithGun
-      takeName: Armature|IdleWithGun|IdleWithGun
+      name: IdleWithGun
+      takeName: IdleWithGun
       internalID: 0
-      firstFrame: 2
+      firstFrame: 0
       lastFrame: 36
       wrapMode: 0
       orientationOffsetY: 0
@@ -122,7 +149,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -140,10 +167,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|MoveForward|MoveForward
-      takeName: Armature|MoveForward|MoveForward
+      name: MoveForward
+      takeName: MoveForward
       internalID: 0
-      firstFrame: 2
+      firstFrame: 0
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -151,7 +178,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -169,10 +196,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|MoveBackwards|MoveBackwards
-      takeName: Armature|MoveBackwards|MoveBackwards
+      name: MoveBackwards
+      takeName: MoveBackwards
       internalID: 0
-      firstFrame: 2
+      firstFrame: 0
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -180,7 +207,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -198,10 +225,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|MoveLeft|MoveLeft
-      takeName: Armature|MoveLeft|MoveLeft
+      name: MoveRight
+      takeName: MoveRight
       internalID: 0
-      firstFrame: 2
+      firstFrame: 0
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -209,7 +236,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -227,10 +254,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|MoveRight|MoveRight
-      takeName: Armature|MoveRight|MoveRight
+      name: MoveLeft
+      takeName: MoveLeft
       internalID: 0
-      firstFrame: 2
+      firstFrame: 0
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -238,7 +265,36 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OpenGate
+      takeName: OpenGate
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -258,7 +314,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 22
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -309,7 +365,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.22
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
