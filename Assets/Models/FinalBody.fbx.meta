@@ -91,7 +91,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -112,7 +112,7 @@ ModelImporter:
       name: Idle
       takeName: Idle
       internalID: 0
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 36
       wrapMode: 0
       orientationOffsetY: 0
@@ -120,7 +120,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -141,7 +141,7 @@ ModelImporter:
       name: IdleWithGun
       takeName: IdleWithGun
       internalID: 0
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 36
       wrapMode: 0
       orientationOffsetY: 0
@@ -149,7 +149,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -170,7 +170,7 @@ ModelImporter:
       name: MoveForward
       takeName: MoveForward
       internalID: 0
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -178,7 +178,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -199,7 +199,7 @@ ModelImporter:
       name: MoveBackwards
       takeName: MoveBackwards
       internalID: 0
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -207,7 +207,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -228,7 +228,7 @@ ModelImporter:
       name: MoveRight
       takeName: MoveRight
       internalID: 0
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -236,7 +236,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -257,7 +257,7 @@ ModelImporter:
       name: MoveLeft
       takeName: MoveLeft
       internalID: 0
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -265,7 +265,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -286,7 +286,7 @@ ModelImporter:
       name: OpenGate
       takeName: OpenGate
       internalID: 0
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
@@ -314,7 +314,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 22
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -365,7 +365,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 22
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

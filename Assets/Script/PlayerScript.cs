@@ -7,7 +7,14 @@ public class PlayerScript : MonoBehaviour
     public Transform rb;
     public float sensitivity = 1.0f;
     public float speed = 1.0f;
+    public AudioSource audioS;
+    public AudioClip footStepSFX;
+
+    [HideInInspector]
+    public bool isFrozen = false;
+
     private Animator anim;
+    private float timer = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +25,31 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.SetFloat("X", Input.GetAxis("Horizontal"));
-        anim.SetFloat("Y", Input.GetAxis("Vertical"));
-        rb.position += Vector3.Scale(transform.rotation * new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")), Vector3.one - Vector3.up).normalized * speed * Time.deltaTime;
-        if (transform.eulerAngles.x >= 60f && transform.eulerAngles.x > 0f && transform.eulerAngles.x < 270f)
+        if (!isFrozen)
         {
-            transform.eulerAngles = new Vector3(60f, transform.eulerAngles.y, transform.eulerAngles.z);
+            anim.SetFloat("X", Input.GetAxis("Horizontal"));
+            anim.SetFloat("Y", Input.GetAxis("Vertical"));
+            rb.position += Vector3.Scale(transform.rotation * new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")), Vector3.one - Vector3.up).normalized * speed * Time.deltaTime;
+            if (transform.eulerAngles.x >= 60f && transform.eulerAngles.x > 0f && transform.eulerAngles.x < 270f)
+            {
+                transform.eulerAngles = new Vector3(60f, transform.eulerAngles.y, transform.eulerAngles.z);
+            }
+            else if (transform.eulerAngles.x <= 300f && transform.eulerAngles.x < 360f && transform.eulerAngles.x > 90f)
+            {
+                transform.eulerAngles = new Vector3(300f, transform.eulerAngles.y, transform.eulerAngles.z);
+            }
+            rb.eulerAngles += new Vector3(0.0f, Input.GetAxis("Mouse X") * sensitivity, 0.0f);
+            transform.eulerAngles += Vector3.right * Input.GetAxis("Mouse Y") * -sensitivity;
+            if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
+            {
+                timer -= Time.deltaTime * 1.4f;
+            }
+            if (timer <= 0.0f)
+            {
+                audioS.PlayOneShot(footStepSFX);
+                audioS.pitch = Random.Range(0.8f, 1.5f);
+                timer = 1.4f;
+            }
         }
-        else if (transform.eulerAngles.x <= 300f && transform.eulerAngles.x < 360f && transform.eulerAngles.x > 90f)
-        {
-            transform.eulerAngles = new Vector3(300f, transform.eulerAngles.y, transform.eulerAngles.z);
-        }
-        rb.eulerAngles += new Vector3(0.0f, Input.GetAxis("Mouse X") * sensitivity, 0.0f);
-        transform.eulerAngles += Vector3.right * Input.GetAxis("Mouse Y") * -sensitivity;
     }
 }
