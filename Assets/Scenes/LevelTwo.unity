@@ -531,6 +531,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: hallway
       objectReference: {fileID: 0}
+    - target: {fileID: 9019854909028679832, guid: d00a9822893ce9f43984386843f6ad9f, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019854909028679832, guid: d00a9822893ce9f43984386843f6ad9f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d00a9822893ce9f43984386843f6ad9f, type: 3}
 --- !u!4 &1751021377 stripped
@@ -562,3 +570,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1751021380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751021378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a36eb8004202844bd334da19f90f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorType: 0.25
+  waitTime: 2.62
+--- !u!1 &1804195680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7877312682337757456, guid: d00a9822893ce9f43984386843f6ad9f, type: 3}
+  m_PrefabInstance: {fileID: 1751021376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1804195681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804195680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34fb3e3989f1f34f819841190be91c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

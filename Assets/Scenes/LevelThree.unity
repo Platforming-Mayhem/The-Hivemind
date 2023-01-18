@@ -166,7 +166,7 @@ Transform:
   m_LocalScale: {x: 2.4825428, y: 5.7852, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &60183720
 MonoBehaviour:
@@ -457,79 +457,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &363302692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 724221321161276402, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
   m_PrefabInstance: {fileID: 724221320970335446}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &444225481
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 444225483}
-  - component: {fileID: 444225482}
-  m_Layer: 0
-  m_Name: ClosetRoomDirector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!320 &444225482
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444225481}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: f445268cf0bd5484399b9061b6e485b1, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: -4278528139253769163, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
-    value: {fileID: 1080770746}
-  - key: {fileID: 0}
-    value: {fileID: 919132148105883877}
-  - key: {fileID: 0}
-    value: {fileID: 235123070}
-  - key: {fileID: -1036363859331567849, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
-    value: {fileID: 2058954636}
-  - key: {fileID: 2102853906262821483, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
-    value: {fileID: 2140043352}
-  - key: {fileID: -1202670844587755331, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
-    value: {fileID: 1433671428}
-  - key: {fileID: 6449545072908942896, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
-    value: {fileID: 363302692}
-  - key: {fileID: -681988122052813154, guid: f445268cf0bd5484399b9061b6e485b1, type: 2}
-    value: {fileID: 919132148105883877}
-  - key: {fileID: 2798785108741806934, guid: f445268cf0bd5484399b9061b6e485b1, type: 2}
-    value: {fileID: 235123070}
-  m_ExposedReferences:
-    m_References: []
---- !u!4 &444225483
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444225481}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.49, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &523242154
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +475,7 @@ GameObject:
   - component: {fileID: 523242155}
   - component: {fileID: 523242156}
   m_Layer: 0
-  m_Name: BedroomDirector
+  m_Name: Director
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,6 +512,10 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -4278528139253769163, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
     value: {fileID: 1080770746}
+  - key: {fileID: 2193462399947937804, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
+    value: {fileID: 919132148105883877}
+  - key: {fileID: -4031823043953006779, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
+    value: {fileID: 235123070}
   - key: {fileID: -1036363859331567849, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
     value: {fileID: 2058954636}
   - key: {fileID: 2102853906262821483, guid: f2ec62e4607e6be48acc92b5dbbc70e3, type: 2}
@@ -864,7 +802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1080770747
 Transform:
   m_ObjectHideFlags: 0
@@ -1193,7 +1131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151273862
 GameObject:
@@ -1570,64 +1508,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1302925522
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1302925525}
-  - component: {fileID: 1302925524}
-  - component: {fileID: 1302925523}
-  m_Layer: 0
-  m_Name: TriggerClosetRoom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1302925523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302925522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a5a2e42c8dbcf947b87a8aec19a9b71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  director: {fileID: 444225481}
---- !u!65 &1302925524
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302925522}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1302925525
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302925522}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.64, y: -0.15, z: 4.05}
-  m_LocalScale: {x: 2.1284, y: 1, z: 1.3264}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1433671428 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1348037519653050516, guid: 25f225228a5c7464a80371cad38d59be, type: 3}
@@ -1896,64 +1776,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1590436969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1590436972}
-  - component: {fileID: 1590436971}
-  - component: {fileID: 1590436970}
-  m_Layer: 0
-  m_Name: TriggerBedroom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1590436970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590436969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a5a2e42c8dbcf947b87a8aec19a9b71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  director: {fileID: 523242154}
---- !u!65 &1590436971
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590436969}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1590436972
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590436969}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.473, y: -0.15, z: 2.534}
-  m_LocalScale: {x: 2.5306678, y: 1, z: 1.3264}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1634601444
 GameObject:
   m_ObjectHideFlags: 0

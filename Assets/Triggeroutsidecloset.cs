@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Triggeroutsidecloset : MonoBehaviour
 {
-    public GameObject Trigger;
     public GameObject director;
 
     private void Start()
