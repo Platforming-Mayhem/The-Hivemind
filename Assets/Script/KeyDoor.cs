@@ -4,32 +4,51 @@ using UnityEngine;
 
 public class KeyDoor : MonoBehaviour
 {
-    public GameObject keyO;
     public GameObject keyrequired;
-    
 
-    private bool keyC;
+
+    
+    private bool ifDestroyed;
+    private float timerC = 5.0f;
 
     private void Start()
     {
-       
+        
         keyrequired.SetActive(false);
     }
 
    
     private void OnTriggerEnter(Collider other)
     {
-        //keyrequired.SetActive(true);
-        if (Input.GetKey(KeyCode.E))
+        
+        if (Input.GetMouseButton(1))
         {
-            if (gameObject.tag == "Key")
-
+            Keycard keyCardS = GameObject.Find("KeyCard").GetComponent<Keycard>();
+            keyCardS.destroyed = false;
+            keyrequired.SetActive(true);
+            if (keyrequired == true)
             {
-                keyC = true;
-                Destroy(gameObject);
+                
+                timerC = timerC - Time.deltaTime;
+                if(timerC == 0)
+                {
+                    keyrequired.SetActive(false);
+                }
             }
+            
+        }
+        else
+        {
+            
+            Destroy(gameObject);
         }
     }
+    
+    void update()
+    {
+
+    }
+
 
     private void OnTriggerExit(Collider other)
     {
