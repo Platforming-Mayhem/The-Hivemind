@@ -47,7 +47,7 @@ ModelImporter:
     second: Armature|MoveRight
   - first:
       74: 8416935648154277115
-    second: Armature|OpenGate
+    second: OpenGate
   - first:
       74: 5754330143168782828
     second: Armature|Sleep
@@ -284,9 +284,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: OpenGate
-      takeName: OpenGate
+      takeName: Armature|OpenGate
       internalID: 0
-      firstFrame: 1
+      firstFrame: 0
       lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
