@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class KeyDoor : MonoBehaviour
 {
-    public GameObject key;
+    public GameObject keyO;
     public GameObject keyrequired;
-    public TextMesh textKey;
+    
+
+    private bool keyC;
 
     private void Start()
     {
+       
         keyrequired.SetActive(false);
     }
+
+   
     private void OnTriggerEnter(Collider other)
     {
-        keyrequired.SetActive(true);
-
-        if(Input.GetKeyDown(KeyCode.E))
+        //keyrequired.SetActive(true);
+        if (Input.GetKey(KeyCode.E))
         {
-            
+            if (gameObject.tag == "Key")
+
+            {
+                keyC = true;
+                Destroy(gameObject);
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        keyrequired.SetActive(false);
+        //keyrequired.SetActive(false);
     }
 
-
+ 
 }
