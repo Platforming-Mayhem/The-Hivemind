@@ -7,18 +7,16 @@ public class Keycard : MonoBehaviour
 
     
     public GameObject key;
-    public bool destroyed = false;
-    private void OnTriggerEnter(Collider other)
-    {
-        
-                if (Input.GetKey(KeyCode.E))
-                {
-                    if (gameObject.tag == "Key")
+    public bool destroyed;
 
-                    {
-                        
-                        destroyed = true;
-                    }
-                }
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+            if (other.CompareTag("Player"))
+            {
+                destroyed = true;
+            }
+        }
     }
 }
