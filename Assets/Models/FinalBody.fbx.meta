@@ -284,9 +284,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: OpenGate
-      takeName: Armature|OpenGate
+      takeName: OpenGate
       internalID: 0
-      firstFrame: 0
+      firstFrame: 1
       lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
