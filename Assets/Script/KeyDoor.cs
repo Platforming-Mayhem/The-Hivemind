@@ -1,46 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyDoor : MonoBehaviour
 {
     public GameObject keyrequired;
-
-
-    
     private bool ifDestroyed;
     private float timerC = 5.0f;
 
     private void Start()
     {
-        
+
         keyrequired.SetActive(false);
     }
 
    
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
+        Keycard keyCardS = GameObject.Find("KeyCard").GetComponent<Keycard>();
         
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) && keyCardS.rend.enabled == true)
         {
-            Keycard keyCardS = GameObject.Find("KeyCard").GetComponent<Keycard>();
-            keyCardS.destroyed = false;
+            Debug.Log("Maybe");
+            
+            
             keyrequired.SetActive(true);
-            if (keyrequired == true)
+            timerC = timerC - Time.deltaTime;
+            if (timerC == 0)
             {
-                
-                timerC = timerC - Time.deltaTime;
-                if(timerC == 0)
-                {
-                    keyrequired.SetActive(false);
-                }
+                Debug.Log("Time" + timerC);
+                keyrequired.SetActive(false);
             }
+                
             
-        }
-        else
-        {
+
             
-            Destroy(gameObject);
         }
     }
     
@@ -52,7 +47,7 @@ public class KeyDoor : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        //keyrequired.SetActive(false);
+        keyrequired.SetActive(false);
     }
 
  

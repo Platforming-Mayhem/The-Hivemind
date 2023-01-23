@@ -7,16 +7,25 @@ public class Keycard : MonoBehaviour
 
     
     public GameObject key;
-    public bool destroyed;
+    
+    public MeshRenderer rend;
 
-    private void OnTriggerStay(Collider other)
+    public void Start()
+    {
+        rend = GetComponent<MeshRenderer>();
+        rend.enabled = true;
+    }
+    public void OnTriggerEnter(Collider other)
     {
         if (Input.GetKey(KeyCode.E))
         {
-            if (other.CompareTag("Player"))
+            if(GameObject.FindWithTag("Player"))
             {
-                destroyed = true;
+                Debug.Log("Works?");
+                rend.enabled = false;
             }
+            
+            
         }
     }
 }
