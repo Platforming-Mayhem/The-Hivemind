@@ -7,7 +7,7 @@ public class DoorScript : MonoBehaviour
     public LayerMask interactibleMask;
     public string doorAnimation = "GateOpen";
     public string playerAnimation = "OpenGate";
-    public Animator playerAnim;
+    private Animator playerAnim;
     public Animator doorAnim;
     public AudioSource sfx;
     public enum Types { once, loop};
@@ -16,6 +16,7 @@ public class DoorScript : MonoBehaviour
     void Start()
     {
         once = false;
+        playerAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     private RaycastHit hit;

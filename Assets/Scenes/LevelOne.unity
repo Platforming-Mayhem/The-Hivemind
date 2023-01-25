@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &60183718
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -268,7 +268,6 @@ MonoBehaviour:
     m_Bits: 8
   doorAnimation: GateOpen
   playerAnimation: OpenGate
-  playerAnim: {fileID: 812930243}
   doorAnim: {fileID: 2007999318}
   sfx: {fileID: 148848882}
   types: 0
@@ -905,7 +904,6 @@ MonoBehaviour:
     m_Bits: 8
   doorAnimation: SlidingDoorOpen
   playerAnimation: 
-  playerAnim: {fileID: 812930243}
   doorAnim: {fileID: 2007999318}
   sfx: {fileID: 1461550189}
   types: 1
@@ -1472,11 +1470,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 988702b41a95d4b439465821676b041c, type: 3}
---- !u!95 &812930243 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 724221321776930837, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
-  m_PrefabInstance: {fileID: 724221320970335446}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &844066677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1692,7 +1685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &946081594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2680,7 +2673,6 @@ MonoBehaviour:
     m_Bits: 8
   doorAnimation: SlidingDoorOpen
   playerAnimation: 
-  playerAnim: {fileID: 812930243}
   doorAnim: {fileID: 2007999318}
   sfx: {fileID: 1461550189}
   types: 1
@@ -3259,7 +3251,6 @@ MonoBehaviour:
     m_Bits: 8
   doorAnimation: SlidingDoorOpen
   playerAnimation: 
-  playerAnim: {fileID: 812930243}
   doorAnim: {fileID: 2007999318}
   sfx: {fileID: 1461550189}
   types: 1
@@ -3285,7 +3276,6 @@ MonoBehaviour:
     m_Bits: 8
   doorAnimation: SlidingDoorOpen
   playerAnimation: 
-  playerAnim: {fileID: 812930243}
   doorAnim: {fileID: 2007999318}
   sfx: {fileID: 1461550189}
   types: 1
@@ -4631,6 +4621,10 @@ PrefabInstance:
     - target: {fileID: -6487334648919045474, guid: 25f225228a5c7464a80371cad38d59be, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6429776694220131211, guid: 25f225228a5c7464a80371cad38d59be, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6422566879780727319, guid: 25f225228a5c7464a80371cad38d59be, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8154,14 +8148,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 724221321161276402, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 724221321776930833, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 216086600}
+    - target: {fileID: 724221321776930837, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5a45db923772d8242b2de313272cf83c, type: 2}
     - target: {fileID: 767364887006872921, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
