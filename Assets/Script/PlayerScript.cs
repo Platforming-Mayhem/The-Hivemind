@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour
         {
             anim.SetFloat("X", Input.GetAxis("Horizontal"));
             anim.SetFloat("Y", Input.GetAxis("Vertical"));
-            rb.position += Vector3.Scale(transform.rotation * new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")), Vector3.one - Vector3.up).normalized * speed * Time.deltaTime;
+            rb.position += Vector3.Scale(-rb.right * Input.GetAxis("Horizontal") - rb.forward * Input.GetAxis("Vertical"), Vector3.one - Vector3.up).normalized * speed * Time.deltaTime;
             if (transform.eulerAngles.x >= 60f && transform.eulerAngles.x > 0f && transform.eulerAngles.x < 270f)
             {
                 transform.eulerAngles = new Vector3(60f, transform.eulerAngles.y, transform.eulerAngles.z);
