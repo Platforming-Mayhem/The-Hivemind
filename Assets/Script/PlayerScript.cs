@@ -13,7 +13,8 @@ public class PlayerScript : MonoBehaviour
     [HideInInspector]
     public bool isFrozen = false;
 
-    private Animator anim;
+    [HideInInspector]
+    public Animator anim;
     private float timer = 1.0f;
 
     // Start is called before the first frame update

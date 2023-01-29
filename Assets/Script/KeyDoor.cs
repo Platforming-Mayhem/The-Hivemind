@@ -20,7 +20,7 @@ public class KeyDoor : MonoBehaviour
     {
         Keycard keyCardS = GameObject.Find("KeyCard").GetComponent<Keycard>();
         
-        if (Input.GetMouseButton(1) && keyCardS.rend.enabled == true)
+        if (Input.GetMouseButton(1))
         {
             Debug.Log("Maybe");
             

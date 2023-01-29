@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class Keycard : MonoBehaviour
 {
-
-    
-    public GameObject key;
-    
-    public MeshRenderer rend;
+    private PlayerScript player;
+    public Transform parent;
+    public Transform point;
 
     public void Start()
     {
-        rend = GetComponent<MeshRenderer>();
-        rend.enabled = true;
+        player = FindObjectOfType<PlayerScript>();
+        GetComponent<BoxCollider>().enabled = true;
     }
     public void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetButtonDown("Fire1") && !player.anim.GetCurrentAnimatorStateInfo(0).IsName("Pickup"))
         {
-            if(GameObject.FindWithTag("Player"))
-            {
-                Debug.Log("Works?");
-                rend.enabled = false;
-            }
-            
-            
+            transform.SetParent(parent);
+            transform.localPosition = Vector3.zero;
+            GetComponent<BoxCollider>().enabled = false;
+            player.anim.SetTrigger("pickUp");
+            player.GetComponentInParent<RePositionScript>().target = point;
         }
     }
 }
