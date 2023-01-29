@@ -8966,6 +8966,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 724221320273445178, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
+      propertyPath: near clip plane
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 724221320273445178, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0.26415092
       objectReference: {fileID: 0}
