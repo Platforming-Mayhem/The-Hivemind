@@ -15,7 +15,7 @@ public class Keycard : MonoBehaviour
         rend = GetComponent<MeshRenderer>();
         rend.enabled = true;
     }
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (Input.GetKey(KeyCode.E))
         {
