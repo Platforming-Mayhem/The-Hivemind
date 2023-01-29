@@ -896,7 +896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.2521, y: -143.4071}
+  m_AnchoredPosition: {x: 1, y: -143.4071}
   m_SizeDelta: {x: 206.5044, y: 25.1859}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829429766
@@ -919,10 +919,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Keycard Required'
+  m_text: ' Keycard Requi red'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9b4e7d2a119e3d42958afc61fcda726, type: 2}
+  m_sharedMaterial: {fileID: 532824867515160485, guid: b9b4e7d2a119e3d42958afc61fcda726, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -71.33472, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4716,7 +4716,6 @@ MonoBehaviour:
     m_Bits: 8
   doorAnimation: GateOpen
   playerAnimation: OpenGate
-  playerAnim: {fileID: 1488924629}
   doorAnim: {fileID: 1063553196}
   sfx: {fileID: 1063553197}
   types: 0
@@ -4852,7 +4851,6 @@ MonoBehaviour:
     m_Bits: 8
   doorAnimation: SlidingDoorOpen
   playerAnimation: 
-  playerAnim: {fileID: 1488924629}
   doorAnim: {fileID: 1063553196}
   sfx: {fileID: 1063553199}
   types: 1
@@ -5301,6 +5299,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 646656327695283761, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 724221320273445178, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
+      propertyPath: near clip plane
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 724221321776930833, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
       propertyPath: target
       value: 
@@ -5351,11 +5357,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
---- !u!95 &1488924629 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 724221321776930837, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
-  m_PrefabInstance: {fileID: 1488924627}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1561907211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5798,7 +5799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: {fileID: 1834688041}
-  destroyed: 0
+  rend: {fileID: 0}
 --- !u!65 &1834688043
 BoxCollider:
   m_ObjectHideFlags: 0
