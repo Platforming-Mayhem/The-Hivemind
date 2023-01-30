@@ -19,7 +19,7 @@ public class Keycard : MonoBehaviour
         {
             transform.SetParent(parent);
             transform.localPosition = Vector3.zero;
-            GetComponent<BoxCollider>().enabled = false;
+            activated = GetComponent<BoxCollider>().enabled = false;
             player.anim.SetTrigger("pickUp");
             player.GetComponentInParent<RePositionScript>().target = point;
         }

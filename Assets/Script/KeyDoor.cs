@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class KeyDoor : MonoBehaviour
 {
     public GameObject keyrequired;
+    public GameObject keyDoorD;
     private bool ifDestroyed;
     private float timerC = 5.0f;
 
@@ -20,7 +21,7 @@ public class KeyDoor : MonoBehaviour
     {
         Keycard keyCardS = GameObject.Find("KeyCard").GetComponent<Keycard>();
         
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) && keyCardS.)
         {
             Debug.Log("Maybe");
             
