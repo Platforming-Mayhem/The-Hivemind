@@ -146,8 +146,8 @@ ModelImporter:
       name: KeycardDoorOpen
       takeName: KeycardDoorOpen
       internalID: 0
-      firstFrame: 0
-      lastFrame: 76
+      firstFrame: 1
+      lastFrame: 146
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

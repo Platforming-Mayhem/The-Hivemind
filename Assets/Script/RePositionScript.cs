@@ -23,7 +23,7 @@ public class RePositionScript : MonoBehaviour
     public void UnFreeze()
     {
         transform.position = new Vector3(spine.position.x, transform.position.y, spine.position.z);
-        transform.eulerAngles = new Vector3(spine.eulerAngles.x, spine.eulerAngles.y + 180.0f, spine.eulerAngles.z);
+        transform.eulerAngles = new Vector3(0.0f, spine.eulerAngles.y + 180.0f, 0.0f);
         rb.isKinematic = false;
         player.isFrozen = false;
     }

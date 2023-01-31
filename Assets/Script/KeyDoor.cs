@@ -5,44 +5,39 @@ using UnityEngine.UI;
 
 public class KeyDoor : MonoBehaviour
 {
+    public Keycard keycard;
     public GameObject keyrequired;
-    public GameObject keyDoorD;
-    private bool ifDestroyed;
-    private float timerC = 5.0f;
+    public Transform point;
+    public DoorScript door;
+    private Animator anim;
 
     private void Start()
     {
-
+        anim = GetComponentInParent<Animator>();
         keyrequired.SetActive(false);
     }
 
    
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
-        Keycard keyCardS = GameObject.Find("KeyCard").GetComponent<Keycard>();
-        
-        if (Input.GetMouseButton(1) && keyCardS.)
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("Maybe");
-            
-            
-            keyrequired.SetActive(true);
-            timerC = timerC - Time.deltaTime;
-            if (timerC == 0)
+            if (Input.GetButtonDown("Fire1"))
             {
-                Debug.Log("Time" + timerC);
-                keyrequired.SetActive(false);
+                if (!keycard.hasKeycard)
+                {
+                    keyrequired.SetActive(true);
+                    door.enabled = false;
+                }
+                else
+                {
+                    keyrequired.SetActive(false);
+                    door.enabled = true;
+                    keycard.transform.localEulerAngles = new Vector3(0.0f, 90.0f, 0.0f);
+                    FindObjectOfType<RePositionScript>().target = point;
+                }
             }
-                
-            
-
-            
         }
-    }
-    
-    void update()
-    {
-
     }
 
 
@@ -50,6 +45,4 @@ public class KeyDoor : MonoBehaviour
     {
         keyrequired.SetActive(false);
     }
-
- 
 }
