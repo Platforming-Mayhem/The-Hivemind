@@ -29,7 +29,7 @@ public class DoorScript : MonoBehaviour
         {
             if(types == Types.once)
             {
-                if (hit.collider.gameObject.GetHashCode() == gameObject.GetHashCode() && Input.GetMouseButtonDown(0) && !once)
+                if (hit.collider.gameObject.GetHashCode() == gameObject.GetHashCode() && Input.GetButtonDown("Fire1") && !once)
                 {
                     if (!sfx.isPlaying)
                         sfx.Play();
@@ -43,7 +43,7 @@ public class DoorScript : MonoBehaviour
             }
             else
             {
-                if (hit.collider.gameObject.GetHashCode() == gameObject.GetHashCode() && Input.GetMouseButtonDown(0))
+                if (hit.collider.gameObject.GetHashCode() == gameObject.GetHashCode() && Input.GetButtonDown("Fire1"))
                 {
                     if (!sfx.isPlaying)
                         sfx.Play();
