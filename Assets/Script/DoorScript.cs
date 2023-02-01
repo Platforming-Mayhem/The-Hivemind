@@ -25,7 +25,7 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 1.0f, interactibleMask))
+        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 1.0f, interactibleMask) && !hit.collider.isTrigger)
         {
             if(types == Types.once)
             {
