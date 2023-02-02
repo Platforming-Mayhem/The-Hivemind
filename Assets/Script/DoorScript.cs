@@ -10,18 +10,24 @@ public class DoorScript : MonoBehaviour
     private Animator playerAnim;
     public Animator doorAnim;
     public AudioSource sfx;
+    public GameObject pressKey;
+    public BoxCollider box;
     public enum Types { once, loop};
     public Types types = Types.once;
     // Start is called before the first frame update
     void Start()
     {
+        pressKey.SetActive(false);
         once = false;
         playerAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     private RaycastHit hit;
     private bool once;
-
+    private void OnTriggerStay(Collider other)
+    {
+        pressKey.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -31,14 +37,18 @@ public class DoorScript : MonoBehaviour
             {
                 if (hit.collider.gameObject.GetHashCode() == gameObject.GetHashCode() && Input.GetButtonDown("Fire1") && !once)
                 {
+                    
                     if (!sfx.isPlaying)
                         sfx.Play();
                     doorAnim.Play(doorAnimation, -1, 0);
                     if (playerAnimation != "")
                     {
                         playerAnim.Play(playerAnimation, -1, 0);
+                        
                     }
                     once = true;
+                    pressKey.SetActive(false);
+                    box.enabled = false;
                 }
             }
             else
@@ -55,5 +65,10 @@ public class DoorScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        pressKey.SetActive(false);
     }
 }
