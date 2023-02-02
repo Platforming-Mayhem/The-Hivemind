@@ -10034,6 +10034,10 @@ PrefabInstance:
       propertyPath: speed
       value: 1.11
       objectReference: {fileID: 0}
+    - target: {fileID: 6089864238450462106, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
+      propertyPath: near clip plane
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 6367576436493313719, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
       propertyPath: m_Avatar
       value: 

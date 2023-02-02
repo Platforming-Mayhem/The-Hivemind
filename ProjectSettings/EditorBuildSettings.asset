@@ -9,28 +9,28 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: ef9d8a51122d54d43ba0388093bc46a3
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Bedroom/Level1.unity
     guid: 58d79450a24976a4aa0ee7bfd1a9c726
   - enabled: 1
-    path: Assets/Scenes/LevelTwo.unity
+    path: Assets/Scenes/Corridor/LevelTwo.unity
     guid: c4ffc6ecb094119488d422484779480f
   - enabled: 1
-    path: Assets/Scenes/LevelThree.unity
+    path: Assets/Scenes/Bedroom/LevelThree.unity
     guid: fab85a2a13ab9b345bba8fd51f3bdc0c
   - enabled: 1
-    path: Assets/Scenes/LevelFour.unity
+    path: Assets/Scenes/Corridor/LevelFour.unity
     guid: 917b118165cc9f440a1545d9fdbec46d
   - enabled: 1
-    path: Assets/Scenes/LevelFive.unity
+    path: Assets/Scenes/Bedroom/LevelFive.unity
     guid: 69555aa7a73b3724e94947ec3c4bc80e
   - enabled: 1
-    path: Assets/Scenes/LevelSix.unity
+    path: Assets/Scenes/Corridor/LevelSix.unity
     guid: cbce2ca8764b4054483182eecea3dddb
   - enabled: 1
-    path: Assets/Scenes/LevelSeven.unity
+    path: Assets/Scenes/Bedroom/LevelSeven.unity
     guid: 74e66d51303d1e44d9cf95fec5c8cb09
   - enabled: 1
-    path: Assets/Scenes/LevelEight.unity
+    path: Assets/Scenes/Corridor/LevelEight.unity
     guid: f22f1272eb5e01b4a88f37bf4a2faf3a
   - enabled: 1
     path: Assets/Scenes/LevelNine.unity
