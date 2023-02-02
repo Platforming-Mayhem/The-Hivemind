@@ -6509,6 +6509,8 @@ MonoBehaviour:
   playerAnimation: 
   doorAnim: {fileID: 226652541}
   sfx: {fileID: 1481402269}
+  pressKey: {fileID: 1101714617}
+  box: {fileID: 0}
   types: 1
 --- !u!64 &169413588
 MeshCollider:
@@ -17472,6 +17474,8 @@ MonoBehaviour:
   playerAnimation: OpenDoor
   doorAnim: {fileID: 226652541}
   sfx: {fileID: 2030916794}
+  pressKey: {fileID: 1101714617}
+  box: {fileID: 460248267}
   types: 0
 --- !u!114 &460248266
 MonoBehaviour:
@@ -20492,6 +20496,10 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1178706581}
+    - target: {fileID: 6030201166829012809, guid: 2f70c9f047dcb0e47ba38c84b66c8d64, type: 3}
+      propertyPath: pressKey
+      value: 
+      objectReference: {fileID: 1101714617}
     - target: {fileID: 6030201166829012810, guid: 2f70c9f047dcb0e47ba38c84b66c8d64, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -23319,6 +23327,8 @@ MonoBehaviour:
   playerAnimation: 
   doorAnim: {fileID: 226652541}
   sfx: {fileID: 1481402269}
+  pressKey: {fileID: 1101714617}
+  box: {fileID: 0}
   types: 1
 --- !u!64 &593022643
 MeshCollider:
@@ -25259,6 +25269,7 @@ GameObject:
   - component: {fileID: 632407468}
   - component: {fileID: 632407467}
   - component: {fileID: 632407466}
+  - component: {fileID: 632407471}
   m_Layer: 3
   m_Name: door00
   m_TagString: Untagged
@@ -25300,6 +25311,8 @@ MonoBehaviour:
   playerAnimation: OpenGate
   doorAnim: {fileID: 226652541}
   sfx: {fileID: 632407467}
+  pressKey: {fileID: 1101714617}
+  box: {fileID: 632407471}
   types: 0
 --- !u!82 &632407467
 AudioSource:
@@ -25461,6 +25474,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632407464}
   m_Mesh: {fileID: 2182605164471047306, guid: 25f225228a5c7464a80371cad38d59be, type: 3}
+--- !u!65 &632407471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632407464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0047898, y: 0.00021975234, z: 0.0088260975}
+  m_Center: {x: 0.0023271164, y: -0.0016849774, z: 0.000085751366}
 --- !u!1 &632982399
 GameObject:
   m_ObjectHideFlags: 0
@@ -29498,6 +29524,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 92256272}
+  - {fileID: 1101714618}
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43534,6 +43561,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100194688}
   m_Mesh: {fileID: 6486106384106084498, guid: 25f225228a5c7464a80371cad38d59be, type: 3}
+--- !u!1 &1101714617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101714618}
+  - component: {fileID: 1101714620}
+  - component: {fileID: 1101714619}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1101714618
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101714617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 718686752}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1, y: -213}
+  m_SizeDelta: {x: 56.6644, y: 56.6644}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1101714619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101714617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3746776b02e03a24c99615c55f2be4aa, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1101714620
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101714617}
+  m_CullTransparentMesh: 1
 --- !u!1 &1106153069
 GameObject:
   m_ObjectHideFlags: 0
@@ -58352,6 +58454,7 @@ GameObject:
   - component: {fileID: 1481402271}
   - component: {fileID: 1481402269}
   - component: {fileID: 1481402270}
+  - component: {fileID: 1481402275}
   m_Layer: 3
   m_Name: door04
   m_TagString: Untagged
@@ -58474,6 +58577,8 @@ MonoBehaviour:
   playerAnimation: 
   doorAnim: {fileID: 226652541}
   sfx: {fileID: 1481402269}
+  pressKey: {fileID: 1101714617}
+  box: {fileID: 1481402275}
   types: 1
 --- !u!64 &1481402271
 MeshCollider:
@@ -58554,6 +58659,19 @@ Transform:
   m_Father: {fileID: 1851108868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1481402275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481402268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.015401587, y: 0.0012310405, z: 0.0121849}
+  m_Center: {x: -0.0036767186, y: -0.0012041056, z: 0.0060924566}
 --- !u!1 &1486446478
 GameObject:
   m_ObjectHideFlags: 0
@@ -64154,6 +64272,8 @@ MonoBehaviour:
   playerAnimation: 
   doorAnim: {fileID: 226652541}
   sfx: {fileID: 1481402269}
+  pressKey: {fileID: 1101714617}
+  box: {fileID: 0}
   types: 1
 --- !u!64 &1647474054
 MeshCollider:
