@@ -603,7 +603,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &456599630
 Transform:
@@ -613,7 +613,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456599629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.157, y: 0, z: 7.404}
+  m_LocalPosition: {x: 8.22, y: -0.021, z: 7.304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5989,7 +5989,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063553192}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.0047898, y: 0.00088379823, z: 0.0088260975}
@@ -6002,11 +6002,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063553193}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.016966378, y: 0.0005055491, z: 0.0121849}
-  m_Center: {x: -0.004459113, y: -0.0013031182, z: 0.0060924566}
+  m_Size: {x: 0.0041273856, y: 0.00073113653, z: 0.0121849}
+  m_Center: {x: 0.0019603805, y: -0.0010670071, z: 0.006092457}
 --- !u!4 &1063553204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8853693321654427650, guid: 25f225228a5c7464a80371cad38d59be, type: 3}
@@ -6525,6 +6525,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974547771920631805, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495794495395564905, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495794495395564905, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
+      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6089864238450462106, guid: 13376417eed3f5445a8f802f81b8c2b1, type: 3}
@@ -7351,7 +7359,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 0.9898987, b: 1, a: 1}
-  m_Intensity: 0.57
+  m_Intensity: 1.3
   m_Range: 7.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

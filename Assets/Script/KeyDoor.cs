@@ -33,7 +33,7 @@ public class KeyDoor : MonoBehaviour
                 {
                     keyrequired.SetActive(false);
                     door.enabled = true;
-                    keycard.transform.localEulerAngles = new Vector3(0.0f, 90.0f, 0.0f);
+                    keycard.transform.localEulerAngles = new Vector3(0.0f, 90.0f, 90.0f);
                     FindObjectOfType<RePositionScript>().target = point;
                 }
             }
