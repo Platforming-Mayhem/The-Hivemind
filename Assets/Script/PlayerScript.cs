@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    private PostProcessVolume volume;
     public Transform rb;
     public float sensitivity = 1.0f;
     public float speed = 1.0f;
@@ -17,12 +19,16 @@ public class PlayerScript : MonoBehaviour
     public Animator anim;
     private float timer = 1.0f;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         anim = GetComponentInParent<Animator>();
+        volume = GetComponentInChildren<PostProcessVolume>();
+        volume.profile.GetSetting<AutoExposure>().keyValue.value = BrightnessScript.value;
     }
 
     // Update is called once per frame
@@ -41,8 +47,8 @@ public class PlayerScript : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(300f, transform.eulerAngles.y, transform.eulerAngles.z);
             }
-            rb.eulerAngles += new Vector3(0.0f, Input.GetAxis("Mouse X") * sensitivity, 0.0f) * Time.deltaTime * 60.0f;
-            transform.eulerAngles += Vector3.right * Input.GetAxis("Mouse Y") * -sensitivity * Time.deltaTime * 60.0f;
+            rb.eulerAngles += new Vector3(0.0f, Input.GetAxis("Mouse X") * sensitivity, 0.0f) * Time.deltaTime * 30.0f;
+            transform.eulerAngles += Vector3.right * Input.GetAxis("Mouse Y") * -sensitivity * Time.deltaTime * 30.0f;
             if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
             {
                 timer -= Time.deltaTime * 1.4f;
@@ -52,6 +58,16 @@ public class PlayerScript : MonoBehaviour
                 audioS.PlayOneShot(footStepSFX);
                 audioS.pitch = Random.Range(0.8f, 1.5f);
                 timer = 1.4f;
+            }
+            if (Input.GetKey(KeyCode.RightBracket))
+            {
+                BrightnessScript.value += Time.deltaTime;
+                volume.profile.GetSetting<AutoExposure>().keyValue.value = BrightnessScript.value;
+            }
+            else if (Input.GetKey(KeyCode.LeftBracket))
+            {
+                BrightnessScript.value -= Time.deltaTime;
+                volume.profile.GetSetting<AutoExposure>().keyValue.value = BrightnessScript.value;
             }
         }
     }
