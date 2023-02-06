@@ -41,8 +41,8 @@ public class PlayerScript : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(300f, transform.eulerAngles.y, transform.eulerAngles.z);
             }
-            rb.eulerAngles += new Vector3(0.0f, Input.GetAxis("Mouse X") * sensitivity, 0.0f);
-            transform.eulerAngles += Vector3.right * Input.GetAxis("Mouse Y") * -sensitivity;
+            rb.eulerAngles += new Vector3(0.0f, Input.GetAxis("Mouse X") * sensitivity, 0.0f) * Time.deltaTime * 60.0f;
+            transform.eulerAngles += Vector3.right * Input.GetAxis("Mouse Y") * -sensitivity * Time.deltaTime * 60.0f;
             if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
             {
                 timer -= Time.deltaTime * 1.4f;
